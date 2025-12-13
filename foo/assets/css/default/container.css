@@ -1,0 +1,28 @@
+.container {
+    container-name: container;
+    container-type: inline-size;
+
+    & .container_ {
+        display: flex;
+    }
+}
+
+
+/* Correction : @container et & */
+@container container (width < 1000px) {
+    & .container_ {
+        flex-direction: column;
+
+        & :nth-child(1) {
+            --component-state: mobile;
+        }
+    }
+}
+
+@container container (width >=1000px) {
+    & .container_ {
+        & :nth-child(1) {
+            --component-state: desktop;
+        }
+    }
+}

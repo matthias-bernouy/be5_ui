@@ -1,0 +1,55 @@
+.ArticleView {
+    margin-top: 3rem;
+    width: 100%;
+    margin: 0 auto;
+    height: 400vh;
+    display: flex;
+    gap: 2rem;
+
+    padding: 0.5rem 2rem;
+
+    &>.Content {
+        max-width: 40em;
+    }
+
+    &>p {
+        font-size: 1.20em;
+    }
+
+    &>.Summary_Layout {
+        background:
+            linear-gradient(to bottom, var(--primary-bg-color), var(--primary-bg-color)) padding-box,
+            conic-gradient(var(--tertiary-bg-color), var(--primary-bg-color), var(--tertiary-bg-color)) border-box;
+        padding: 1rem;
+        border-radius: 1rem;
+        corner-shape: squircle;
+        width: max-content;
+        height: fit-content;
+        border: 1px solid transparent;
+        position: sticky;
+        top: 2rem;
+        margin-top: 2rem;
+
+        &>* {
+            margin: 0;
+            font-size: 1rem;
+            color: var(--secondary-text-color);
+        }
+
+        &>.step1 {
+            margin-left: 0;
+        }
+
+        &>.step2 {
+            margin-left: 0.75rem;
+        }
+
+        &>.step3 {
+            margin-left: 1.5rem;
+        }
+
+        &>.Expand {
+            display: none;
+        }
+    }
+}

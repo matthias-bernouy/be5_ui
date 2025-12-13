@@ -1,0 +1,25 @@
+:root {
+    /**
+     * Colors
+     */
+    --primary-color: hsl(226 76% 77%);
+    --secondary-color: hsl(45 48% 59%);
+
+    --danger-color: hsl(9 26% 64%);
+    --warning-color: hsl(52 19% 57%);
+    --success-color: hsl(146 17% 59%);
+    --info-color: hsl(217 28% 65%);
+
+    /**
+     * Texts
+     */
+    --primary-text-color: hsl(0, 0%, 95%);
+    --secondary-text-color: hsl(0, 0%, 70%);
+
+    /**
+     * Backgrounds
+     */
+    --primary-bg-color: hsl(0, 0%, 3%);
+    --secondary-bg-color: hsl(0, 0%, 8%);
+    --tertiary-bg-color: hsl(0, 0%, 13%);
+}

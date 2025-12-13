@@ -1,0 +1,21 @@
+.btn,
+button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: var(--primary-color);
+    color: var(--text1-color);
+}
+
+.btn:hover,
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+.btn:disabled,
+button:disabled {
+    background-color: var(--text1-color);
+    cursor: not-allowed;
+}

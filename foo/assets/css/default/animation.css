@@ -1,0 +1,33 @@
+/**
+ * Animation Modernes
+ * Affichage des éléments par le bas avec 
+ */
+
+
+/** Ajout d'un shadow */
+.animation_view {
+    animation-timeline: view();
+    animation-range: 100px 50vh;
+    animation-fill-mode: both;
+    animation-timing-function: fade-in-out ease-in-out;
+}
+
+.animation_view_text {
+    opacity: 0;
+    transform: translateY(100vh);
+    animation-name: vertical_keyframes, opacity_keyframes;
+    animation-range: 100px 50vh, 0% 40%;
+    animation-timing-function: ease-out, ease-in-out;
+}
+
+@keyframes opacity_keyframes {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes vertical_keyframes {
+    to {
+        transform: translateY(0);
+    }
+}

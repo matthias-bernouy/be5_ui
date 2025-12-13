@@ -1,0 +1,148 @@
+@import url('/assets/css/default/animation.css');
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/assets/fonts/roboto.woff2') format('woff2');
+}
+
+* {
+    margin: 0rem;
+    padding: 0rem;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+
+
+@view-transition {
+    navigation: auto;
+}
+
+/**
+ * Ajoute 30% de margin à tous les titres et p
+ */
+h1 {
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 2em 0;
+}
+
+h2 {
+    font-size: 1.7em;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 1.7em 0;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 1.5em 0;
+}
+
+h4 {
+    font-size: 1.3em;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 1.3em 0;
+}
+
+h5 {
+    font-size: 1.2em;
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 1.2em 0;
+}
+
+h6 {
+    font-size: 1.1em;
+    font-weight: 200;
+    line-height: 1.2;
+    margin: 1.1em 0;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 1em 0;
+}
+
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+body {
+    line-height: 1.5;
+    color: var(--primary-text-color);
+    background-color: var(--primary-bg-color);
+
+}
+
+@keyframes rotate {
+    to {
+        --angle: 360deg;
+    }
+}
+
+@media screen and (width > 768px) {
+    p {
+        font-size: 1.3em;
+    }
+}
+
+li,
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--primary-text-color);
+    line-height: 1.5;
+    outline: none;
+}
+
+input,
+textarea {
+    border: none;
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* main {
+    padding: 2rem clamp(1.5rem, 5vw, 4rem);
+    width: 100%;
+    max-width: 60em;
+    font-size: 2rem;
+} */
+
+.text_m {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 1rem 0;
+}
+
+.text_s {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin: 1rem 0;
+    color: var(--secondary-text-color);
+}
