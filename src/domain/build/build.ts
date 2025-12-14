@@ -31,7 +31,7 @@ export default async function Build() {
     buildIMG();
     await buildHTML();
 
-    staticServe();
+    await staticServe();
 
     const htmlFiles = getHTMLPathsFromDist();
 
