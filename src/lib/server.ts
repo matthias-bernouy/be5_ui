@@ -1,5 +1,5 @@
 import express from "express";
-import Global from "@/domain/build/Global.js";
+import Global from "@/Global.js";
 import { Server } from "http";
 
 let server: null | Server = null;

@@ -1,5 +1,5 @@
-import { getFilesPath } from "@/domain/build/Files.js";
-import { Global } from "@/domain/build/Global.js";
+import { getFilesPath } from "@/lib/files.js";
+import { Global } from "@/Global.js";
 
 export function getCSSFiles() {
     const pageFiles = getFilesPath(Global.dist);

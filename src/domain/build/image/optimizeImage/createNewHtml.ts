@@ -1,6 +1,7 @@
 import { launchPage } from "@/lib/browser.js";
-import Global from "@/domain/build/Global.js";
+import Global from "@/Global.js";
 import fs from "fs";
+import { buildSizes } from "./buildSizes";
 
 export default async function createNewHtml(
     imgIDs: string[],
@@ -22,16 +23,7 @@ export default async function createNewHtml(
         return srcSet;
     }
 
-    const buildSizes = (imgID: string) => {
-        const sizes = rules[imgID].map((rule) => {
-            if (rule.fixedWidth) {
-                return `(max-width: ${rule.deviceWidth}px) ${rule.fixedWidth}px`;
-            } else {
-                return `(max-width: ${rule.deviceWidth}px) ${rule.ratio}vw`;
-            }
-        });
-        return sizes.join(', ');
-    }
+
 
 
     const metadataFinal = imgIDs.map((imgID) => {
@@ -40,11 +32,9 @@ export default async function createNewHtml(
             width: metadata[imgID].width,
             height: metadata[imgID].height,
             srcset: buildSrcSet(imgID),
-            sizes: buildSizes(imgID)
+            sizes: buildSizes(imgID, rules)
         }
     });
-
-    console.log(metadataFinal);
 
     await page.runScript((
         metadata: Record<string, { id: string, width: number, height: number, srcset: string, sizes: string }>

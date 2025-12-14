@@ -1,6 +1,6 @@
 import { launchPage } from "@/lib/browser.js";
-import { writeFileSync } from "@/domain/build/Files.js";
-import Global from "@/domain/build/Global.js";
+import { writeFileSync } from "@/lib/files.js";
+import Global from "@/Global.js";
 
 export default async function getIMGs(url: string) {
 

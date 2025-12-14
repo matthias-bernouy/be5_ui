@@ -1,6 +1,6 @@
-import puppeteer from "puppeteer";
+import puppeteer, { Browser } from "puppeteer";
 
-let browser: puppeteer.Browser;
+let browser: Browser;
 
 export const launchPage = async () => {
     if (!browser) browser = await puppeteer.launch();
