@@ -7,6 +7,8 @@ import optimizeImage from './image/optimizeImage/optimizeImage.js';
 import getHTMLPathsFromDist from './html/getHTMLFiles.js';
 import { closeBrowser } from '@/lib/browser.js';
 import runCompression from './compression/runCompression.js';
+import buildRobots from './seo/buildRobots.js';
+import buildSitemap from './seo/buildSitemap.js';
 
 
 export default async function Build() {
@@ -30,6 +32,8 @@ export default async function Build() {
     buildCSS();
     buildIMG();
     await buildHTML();
+    buildRobots();
+    buildSitemap();
 
     await staticServe();
 
