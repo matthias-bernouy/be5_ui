@@ -1,0 +1,29 @@
+
+name: Tests du projet
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  test_and_lint:
+    name: Tests TypeScript (Jest)
+    runs-on: ubuntu-latest 
+    steps:
+    - name: Checkout du Code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 24.x
+        cache: 'npm' 
+
+    - name: Installation des Dépendances
+      run: npm ci 
+
+    - name: Exécution des Tests
+      run: npm test
