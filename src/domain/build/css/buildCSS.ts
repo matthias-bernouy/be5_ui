@@ -1,6 +1,6 @@
-import { copyFile, getFilesPath, mkdir } from "@/domain/build/Files.js";
+import { copyFile, getFilesPath, mkdir } from "@/lib/files.js";
 import path from "path";
-import { Global } from "@/domain/build/Global.js";
+import { Global } from "@/Global.js";
 import { incrementDataReporting } from "@/domain/build/reporting/dataReporting.js";
 
 export default function buildCSS() {

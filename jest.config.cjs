@@ -6,8 +6,11 @@ module.exports = {
     ],
     testPathIgnorePatterns: [
         "/node_modules/",
-        "/dist/"
+        "/.dist/"
     ],
+    moduleNameMapper: {
+        '^@/(.*)$': '<rootDir>/src/$1',
+    },
     collectCoverage: true,
     coverageDirectory: "coverage",
     collectCoverageFrom: [

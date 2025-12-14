@@ -19,7 +19,7 @@ export default async function getImageWidthForEachDevices(url: string, devicesWi
             return ret;
         }, [imgIds]);
 
-        res.forEach((img) => {
+        res.forEach((img: { id: string, width: number }) => {
             if (!imageWidth[img.id]) imageWidth[img.id] = [];
             imageWidth[img.id].push({ deviceWidth: width, imageWidth: img.width });
         });
