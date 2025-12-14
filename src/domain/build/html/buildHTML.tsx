@@ -1,9 +1,9 @@
-import { getFilesPath, mkdir, copyFile } from "@/domain/build/Files.js";
+import { getFilesPath, mkdir, copyFile } from "@/lib/files.js";
 import path from "path";
 import fs from "fs";
 import { pathToFileURL } from "url";
 import { renderToStaticMarkup } from "react-dom/server";
-import { Global } from "@/domain/build/Global.js";
+import { Global } from "@/Global.js";
 
 export default async function buildHTML() {
     const pageFiles = getFilesPath(Global.pages);

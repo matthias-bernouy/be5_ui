@@ -1,11 +1,11 @@
-import Global from "@/domain/build/Global.js";
+import Global from "@/Global.js";
 import getImgIDs from "@/domain/build/image/optimizeImage/getIMGs.js";
 import getImageWidthForEachDevices from "@/domain/build/image/optimizeImage/getImageWidthForEachDevices.js";
 import getOptimalRules from "@/domain/build/image/optimizeImage/getOptimalRules.js";
 import createWebpVariants from "@/domain/build/image/optimizeImage/createWebpVariants.js";
 import createNewHtml from "./createNewHtml.js";
 import { getImageMetadata } from "@/lib/image.js";
-import { mkdir } from "@/domain/build/Files.js";
+import { mkdir } from "@/lib/files.js";
 import path from "path";
 
 export default async function optimizeImage(url: string) {

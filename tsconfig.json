@@ -6,8 +6,8 @@
             "DOM",
             "DOM.Iterable"
         ],
-        "module": "NodeNext",
-        "moduleResolution": "NodeNext",
+        "module": "preserve",
+        "moduleResolution": "bundler",
         "skipLibCheck": true,
         "rootDir": "./",
         "jsx": "react-jsx",
@@ -28,6 +28,7 @@
     },
     "include": [
         "./src/**/*",
-        "./__foo__/**/*"
+        "./__foo__/**/*",
+        "./__tests__/**/*"
     ]
 }

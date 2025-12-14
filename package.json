@@ -9,10 +9,13 @@
   "scripts": {
     "dev": "tsx src/bin/dev.ts",
     "build": "tsx src/bin/build.ts",
-    "test": "jest",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
     "test:watch": "jest --watch"
   },
   "devDependencies": {
+    "@babel/core": "^7.28.5",
+    "@babel/preset-env": "^7.28.5",
+    "@babel/preset-typescript": "^7.28.5",
     "@types/browser-sync": "^2.29.1",
     "@types/express": "^5.0.6",
     "@types/jest": "^30.0.0",
@@ -21,6 +24,7 @@
     "@types/react-dom": "^18.3.1",
     "@types/sharp": "^0.31.1",
     "@types/typescript": "^0.4.29",
+    "babel-jest": "^30.2.0",
     "browser-sync": "^3.0.4",
     "chokidar": "^3.5.3",
     "express": "^5.2.1",
@@ -30,6 +34,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "sharp": "^0.34.5",
+    "ts-jest": "^29.4.6",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
     "tsx": "^4.0.2",
