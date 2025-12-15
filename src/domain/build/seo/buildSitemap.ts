@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { Global } from "@/domain/build/Global.js";
+import { Global } from "@/Global.js";
 import getHTMLPathsFromDist from "@/domain/build/html/getHTMLFiles.js";
 
 export default function buildSitemap() {

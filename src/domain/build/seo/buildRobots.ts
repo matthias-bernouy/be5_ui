@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { Global } from "@/domain/build/Global.js";
+import { Global } from "@/Global.js";
 
 export default function buildRobots() {
     const robotsContent = `

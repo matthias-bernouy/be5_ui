@@ -8,7 +8,7 @@ export default function buildIMG() {
     const files = getFilesPath(Global.src);
 
     for (const file of files) {
-        if (!file.endsWith('.png') && !file.endsWith('.jpg') && !file.endsWith('.jpeg') && !file.endsWith('.gif') && !file.endsWith('.webp')) {
+        if (!file.endsWith('.png') && !file.endsWith('.jpg') && !file.endsWith('.jpeg') && !file.endsWith('.gif') && !file.endsWith('.webp') && !file.endsWith('.svg')) {
             continue;
         }
         const dest = file.replace(Global.src, Global.dist);
