@@ -13,5 +13,9 @@ export default function Text(props: TextProps) {
     if (!type) {
         type = "p";
     }
+    
+    if (!className) {
+        className = "";
+    }
     return React.createElement(type, { className: className + (animated ? " animation_opacity" : "") + (size ? ` text_${size}` : ""), children });
 }

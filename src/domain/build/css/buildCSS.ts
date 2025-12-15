@@ -1,7 +1,6 @@
 import { copyFile, getFilesPath, mkdir } from "@/lib/files.js";
 import path from "path";
 import { Global } from "@/Global.js";
-import { incrementDataReporting } from "@/domain/build/reporting/dataReporting.js";
 
 export default function buildCSS() {
 
@@ -13,11 +12,8 @@ export default function buildCSS() {
         }
         const dest = file.replace(Global.src, Global.dist);
         mkdir(path.dirname(dest));
+
         copyFile(file, dest);
-
-        incrementDataReporting("cssCopied");
     }
-
-    
-
 }
+

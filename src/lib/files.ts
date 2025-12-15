@@ -12,6 +12,14 @@ export function copyFile(src: string, dest: string) {
     fs.writeFileSync(dest, fs.readFileSync(src));
 }
 
+export function getContent(path: string): string {
+    return fs.readFileSync(path, 'utf-8');
+}
+
+export function replaceContent(path: string, content: string): void {
+    fs.writeFileSync(path, content);
+}
+
 export function getFilesPath(path: string) {
     const files: string[] = [];
     fs.readdirSync(path).forEach(file => {

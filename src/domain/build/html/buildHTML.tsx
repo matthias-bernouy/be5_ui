@@ -4,6 +4,7 @@ import fs from "fs";
 import { pathToFileURL } from "url";
 import { renderToStaticMarkup } from "react-dom/server";
 import { Global } from "@/Global.js";
+import { minifyHTMLFile } from "@/lib/minify";
 
 export default async function buildHTML() {
     const pageFiles = getFilesPath(Global.pages);
@@ -27,6 +28,7 @@ export default async function buildHTML() {
             dest = dest.replace(".tsx", ".html");
             mkdir(path.dirname(dest));
             fs.writeFileSync(dest, htmlStatique);
+            await minifyHTMLFile(dest);
         } catch (error) {
             console.log(error);
         }

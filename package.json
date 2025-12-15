@@ -28,6 +28,7 @@
     "browser-sync": "^3.0.4",
     "chokidar": "^3.5.3",
     "express": "^5.2.1",
+    "html-minifier-terser": "^7.2.0",
     "jest": "^30.2.0",
     "puppeteer": "^24.15.0",
     "quickchart-js": "^3.1.3",
@@ -40,5 +41,8 @@
     "tsx": "^4.0.2",
     "typescript": "^5.9.3",
     "uuid": "^13.0.0"
+  },
+  "dependencies": {
+    "@types/html-minifier-terser": "^7.0.2"
   }
 }
